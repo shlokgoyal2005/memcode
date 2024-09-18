@@ -8,6 +8,7 @@ import Page_courses_id_review_print from './pages/courses_id_review_print';
 import Page_courses_id_all_print from './pages/courses_id_all_print';
 import Page_courses_id_review from './pages/courses_id_review';
 import Page_courses_id_learn from './pages/courses_id_learn';
+import Page_courses_id_story from './pages/courses_id_story';
 import Page_courses_id from './pages/courses_id';
 
 import Page_profile from './pages/profile';
@@ -34,6 +35,7 @@ const router =
       <Route exact path="/courses"            component={Page_courses}/>
       <Route exact path="/courses/new"        component={auth(Page_courses_new)}/>
       <Route exact path="/courses/:id"        component={Page_courses_id}/>
+      <Route exact path="/courses/:id/story"  component={auth(Page_courses_id_story)}/>
       <Route exact path="/courses/:id/learn"  component={auth(Page_courses_id_learn)}/>
       <Route exact path="/courses/:id/review" component={auth(Page_courses_id_review)} simulated={false} persistent={false}/>
       <Route exact path="/courses/:id/review/print" component={auth(Page_courses_id_review_print)}/>
