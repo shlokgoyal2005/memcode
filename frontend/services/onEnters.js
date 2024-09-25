@@ -1,4 +1,4 @@
-import { Redirect } from 'react-router';
+import { Navigate } from 'react-router';
 import store from '~/store';
 import Urls from '~/services/Urls';
 import { AuthenticationActions } from '~/reducers/Authentication';
@@ -10,7 +10,7 @@ const requireAuthentication = (Component) => {
   if (getCurrentUser()) {
     return (props) => <Component {...props}/>;
   } else {
-    return (props) => <Redirect to="/please-sign-in" {...props}/>;
+    return (props) => <Navigate to="/please-sign-in" {...props}/>;
   }
 };
 
@@ -20,7 +20,7 @@ const redirectToOwnCoursesIfAuthenticated = (Component) => {
     // This sets the lastpage information from sesssionStorage to lastpage
     const pageHistory = sessionStorage.getItem("lastpage");
     sessionStorage.removeItem("lastpage");
-    return (props) => <Redirect to={pageHistory ? pageHistory : Urls.userShow(currentUser.id)} {...props}/>;
+    return (props) => <Navigate to={pageHistory ? pageHistory : Urls.userShow(currentUser.id)} {...props}/>;
   } else {
     return (props) => <Component {...props}/>;
   }
@@ -44,7 +44,7 @@ const requireAdmin = (Component) => {
   if (getCurrentUser() && getCurrentUser().email === 'lakesare@gmail.com') {
     return (props) => <Component {...props}/>;
   } else {
-    return (props) => <Redirect to="/please-sign-in" {...props}/>;
+    return (props) => <Navigate to="/please-sign-in" {...props}/>;
   }
 };
 
