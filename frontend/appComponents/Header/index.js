@@ -24,13 +24,11 @@ class Header extends React.Component {
       {
         !this.props.currentUser &&
         <NavLink
-          exact
           to="/courses"
           className="button link courses"
         >Courses</NavLink>
       }
       <NavLink
-        exact
         to="/courses/new"
         className="button link create"
       >Create</NavLink>
@@ -41,7 +39,6 @@ class Header extends React.Component {
       {
         !this.props.currentUser &&
         <NavLink
-          exact
           to="/contact"
           className="button link contact"
         >Contact</NavLink>
