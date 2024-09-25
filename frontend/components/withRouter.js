@@ -7,13 +7,13 @@ import {
 function withRouter(Component) {
   function ComponentWithRouterProp(props) {
     let location = useLocation();
-    const history = useNavigate();
+    const navigate = useNavigate();
     let params = useParams();
     return (
       <Component
         {...props}
         location={location}
-        history={history}
+        navigate={navigate}
         params={params}
       />
     );

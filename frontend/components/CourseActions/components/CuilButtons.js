@@ -10,7 +10,7 @@ import TogglerAndModal from '~/components/TogglerAndModal';
 @withRouter
 class CuilButtons extends React.Component {
   static propTypes = {
-    history: PropTypes.object.isRequired,
+    navigate: PropTypes.func.isRequired,
     currentUser: orFalse(PropTypes.object).isRequired,
 
     nOfProblemsToLearn: PropTypes.number.isRequired,
@@ -50,9 +50,9 @@ class CuilButtons extends React.Component {
       { courseId: this.props.courseDto.course.id }
     )
       .then((payload) => {
-        // stuff needs to be refetched, as history.push() doesn't trigger a rerender
+        // stuff needs to be refetched, as `navigate()` doesn't trigger a rerender
         this.props.MyActions.apiGetCourses();
-        this.props.history.push(`/courses/${payload.courseId}`);
+        this.props.navigate(`/courses/${payload.courseId}`);
       })
 
   ifCourseIsLearnedAndActive = () => {

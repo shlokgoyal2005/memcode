@@ -22,7 +22,7 @@ import css from './index.css';
 )
 class Page_courses_new extends React.Component {
   static propTypes = {
-    history: PropTypes.object.isRequired,
+    navigate: PropTypes.func.isRequired,
     MyActions: PropTypes.object.isRequired,
   }
 
@@ -46,7 +46,7 @@ class Page_courses_new extends React.Component {
         this.state.formState
       )
         .then((course) => {
-          this.props.history.push(`/courses/${course.id}`);
+          this.props.navigate(`/courses/${course.id}`);
           // Very important to refetch the courses, - otherwise the first problem will not be visibly 'to learn'.
           this.props.MyActions.apiGetCourses();
         });
