@@ -7,7 +7,7 @@ import css from './index.scss';
 
 class StandardTooltip extends React.Component {
   static propTypes = {
-    tooltipEl: PropTypes.oneOfType([PropTypes.element, PropTypes.string]).isRequired,
+    tooltipEl: PropTypes.oneOfType([PropTypes.element, PropTypes.string, PropTypes.oneOf([null])]),
     children: PropTypes.any,
 
     width: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
