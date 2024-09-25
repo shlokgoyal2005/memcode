@@ -86,4 +86,8 @@ import updateCoauthors from './updateCoauthors';
 router.updateCoauthors = updateCoauthors;
 import find from './find';
 router.find = find;
+import search from './search';
+router.search = search;
+import searchCreateEmbeddingsForAllCourses from './searchCreateEmbeddingsForAllCourses';
+router.searchCreateEmbeddingsForAllCourses = searchCreateEmbeddingsForAllCourses;
 export default router;
