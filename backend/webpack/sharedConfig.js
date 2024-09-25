@@ -12,7 +12,7 @@ module.exports = {
   externals: nodeModules,
   _partialEntry: {
     // babel-polyfill for await async to work: http://stackoverflow.com/a/33527883/3192470
-    index: ['babel-polyfill', './index']
+    index: ['./index']
   },
   target: 'node',
   // https://github.com/webpack/webpack/issues/1599#issuecomment-186841345
@@ -25,37 +25,7 @@ module.exports = {
     path: path.join(__dirname, '../webpacked'),
     filename: '[name].js'
   },
-  module: {
-    rules: [
-      {
-        test: /\.js$/,
-        exclude: [/(node_modules)/],
-        use: [
-          {
-            loader: 'babel-loader',
-            options: {
-              presets: ['@babel/preset-env'],
-              plugins: [
-                "@babel/plugin-proposal-class-properties",
-                ["@babel/plugin-proposal-decorators", { legacy: true }],
-                "@babel/plugin-proposal-do-expressions",
-                "@babel/plugin-proposal-export-default-from",
-                "@babel/plugin-proposal-export-namespace-from",
-                "@babel/plugin-proposal-function-bind",
-                "@babel/plugin-proposal-function-sent",
-                "@babel/plugin-proposal-json-strings",
-                "@babel/plugin-proposal-logical-assignment-operators",
-                "@babel/plugin-proposal-nullish-coalescing-operator",
-                "@babel/plugin-proposal-numeric-separator",
-                "@babel/plugin-proposal-optional-chaining",
-                "@babel/plugin-proposal-throw-expressions"
-              ]
-            }
-          }
-        ]
-      }
-    ]
-  },
+  module: {},
   // allows to import from the deep nested folders:
   // instead of: import '../../../../../services',
   // import '~/services'

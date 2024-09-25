@@ -1,5 +1,3 @@
-import fetch from 'node-fetch';
-
 const createEmbedding = async (input) => {
   const response = await fetch('https://api.openai.com/v1/embeddings', {
     method: 'POST',
