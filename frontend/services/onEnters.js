@@ -8,9 +8,9 @@ const getCurrentUser = () =>
 
 const requireAuthentication = (Component) => {
   if (getCurrentUser()) {
-    return (props) => <Component {...props}/>;
+    return <Component/>;
   } else {
-    return (props) => <Navigate to="/please-sign-in" {...props}/>;
+    return <Navigate to="/please-sign-in"/>;
   }
 };
 
@@ -20,9 +20,9 @@ const redirectToOwnCoursesIfAuthenticated = (Component) => {
     // This sets the lastpage information from sesssionStorage to lastpage
     const pageHistory = sessionStorage.getItem("lastpage");
     sessionStorage.removeItem("lastpage");
-    return (props) => <Navigate to={pageHistory ? pageHistory : Urls.userShow(currentUser.id)} {...props}/>;
+    return <Navigate to={pageHistory ? pageHistory : Urls.userShow(currentUser.id)}/>;
   } else {
-    return (props) => <Component {...props}/>;
+    return <Component/>;
   }
 };
 
@@ -35,16 +35,16 @@ const signIn = (Component) => {
     window.location = window.location.pathname;
     return null;
   } else {
-    return (props) => <Component {...props}/>;
+    return <Component/>;
   }
 };
 
 const requireAdmin = (Component) => {
   // introduce ifAdmin=true later
   if (getCurrentUser() && getCurrentUser().email === 'lakesare@gmail.com') {
-    return (props) => <Component {...props}/>;
+    return <Component/>;
   } else {
-    return (props) => <Navigate to="/please-sign-in" {...props}/>;
+    return <Navigate to="/please-sign-in"/>;
   }
 };
 

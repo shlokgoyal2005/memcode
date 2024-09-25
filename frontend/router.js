@@ -11,7 +11,7 @@ import Page_courses_id_learn from './pages/courses_id_learn';
 import Page_courses_id_story from './pages/courses_id_story';
 import Page_courses_id from './pages/courses_id';
 
-import Page_profile from './pages/profile';
+// import Page_profile from './pages/profile';
 import Page_users_id from './pages/users_id';
 
 // import Page_offline_courses from './pages/offline_courses';
@@ -43,7 +43,7 @@ const router =
       <Route exact path="/courses/:id/review/simulated" element={(props) => <Page_courses_id_review {...props} simulated/>}/>
       <Route exact path="/courses/:id/review/persistent" element={(props) => <Page_courses_id_review {...props} persistent/>}/>
 
-      <Route exact path="/profile" element={<Page_profile/>}/>
+      {/* <Route exact path="/profile" element={<Page_profile/>}/> */}
       <Route exact path="/users/:id" element={onEnters.signIn(Page_users_id)}/>
       <Route exact path="/home" element={Page_home}/>
 
