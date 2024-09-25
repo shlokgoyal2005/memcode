@@ -117,7 +117,7 @@ module.exports = {
       copyUnmodified: true
     }),
     new MiniCssExtractPlugin({
-      filename: '/index_2.css'
+      filename: 'index_2.css'
     }),
     new webpack.ProvidePlugin({
       React: 'react',

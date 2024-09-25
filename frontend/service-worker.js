@@ -1,5 +1,7 @@
 console.log('this is my custom service worker');
-workbox.precaching.precacheAndRoute(self.__precacheManifest || []);
+
+import { precacheAndRoute } from 'workbox-precaching/precacheAndRoute';
+precacheAndRoute(self.__WB_MANIFEST);
 
 self.addEventListener('install', () => {
   // The promise that skipWaiting() returns can be safely ignored.
