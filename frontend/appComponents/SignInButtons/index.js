@@ -1,5 +1,5 @@
 import css from './index.css';
-import { withRouter } from 'react-router-dom';
+import withRouter from '~/components/withRouter';
 
 @withRouter
 

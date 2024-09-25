@@ -1,7 +1,7 @@
 import { Helmet } from 'react-helmet';
 import MyDuck from '~/ducks/MyDuck';
 
-import { withRouter } from "react-router-dom";
+import withRouter from '~/components/withRouter';
 import StandardTooltip from '~/components/StandardTooltip';
 import Main from '~/appComponents/Main';
 import Loading from '~/components/Loading';

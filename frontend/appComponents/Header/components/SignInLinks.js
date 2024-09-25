@@ -1,7 +1,6 @@
-import { withRouter } from 'react-router-dom';
+import withRouter from '~/components/withRouter';
 
 @withRouter
-
 class SignInLinks extends React.Component {
   
   redirectBackTo = () => {
