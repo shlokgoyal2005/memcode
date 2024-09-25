@@ -1,5 +1,5 @@
 import Delta from 'quill-delta';
-import Parchment from 'parchment';
+import { Registry } from 'parchment';
 
 import fromFileToDataUrl from '~/services/fromFileToDataUrl';
 import preloadImage from '~/services/preloadImage';
@@ -41,7 +41,7 @@ const placeholdAndCreateImage = (file, quill, { onSuccess = () => {} } = {}) => 
           // Will be false when we save a new card, and quill container el changes.
           if (placeholderEl) {
             // Find blot
-            const blot = Parchment.find(placeholderEl);
+            const blot = Registry.find(placeholderEl);
             const index = blot.offset(quill.scroll);
 
             quill.updateContents(
@@ -60,7 +60,7 @@ const placeholdAndCreateImage = (file, quill, { onSuccess = () => {} } = {}) => 
             const newQuill = newQuillReact.editor;
 
             // Find blot
-            const blot = Parchment.find(el);
+            const blot = Registry.find(el);
             const index = blot.offset(newQuill.scroll);
 
             newQuill.updateContents(
