@@ -1,5 +1,5 @@
 const webpack = require('webpack');
-const WebpackNotifierPlugin = require('webpack-notifier');
+// const WebpackNotifierPlugin = require('webpack-notifier');
 const sharedConfig = require('./sharedConfig');
 
 module.exports = {
@@ -14,17 +14,17 @@ module.exports = {
     new webpack.DefinePlugin({
       'process.env.NODE_ENV': JSON.stringify('development')
     }),
-    new WebpackNotifierPlugin({
-      alwaysNotify: true,
-      excludeWarnings: true
-    })
+    // new WebpackNotifierPlugin({
+    //   alwaysNotify: true,
+    //   excludeWarnings: true
+    // })
   ],
 
   resolve: sharedConfig.resolve,
 
   stats: {
     modules: false,
-    maxModules: 0,
+    // maxModules: 0,
     children: false
   },
 

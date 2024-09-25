@@ -106,9 +106,11 @@ module.exports = {
   _partialPlugins: [
     // new CleanWebpackPlugin([outputPath]),
     // copies subfoldered files directly into /webpackedFiles
-    new CopyWebpackPlugin([
-      'nonWebpackedFiles'
-    ], {
+    new CopyWebpackPlugin({
+      patterns: [
+        { from: 'nonWebpackedFiles' }
+      ],
+    }, {
       // ___Why do we need it?
       //    Because workbox-webpack-plugin's precache-minifest will not include copied over files on next rebuilds otherwise.
       // Copies files, regardless of modification when using watch or webpack-dev-server. All files are copied on first build, regardless of this option
