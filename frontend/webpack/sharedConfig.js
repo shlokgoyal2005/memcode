@@ -65,6 +65,7 @@ module.exports = {
           {
             loader: 'css-loader',
             options: {
+              esModule: false,
               sourceMap: true,
               modules: 'global'
             }
