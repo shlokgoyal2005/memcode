@@ -18,7 +18,7 @@ import dayjs from 'dayjs';
 import relativeTime from 'dayjs/plugin/relativeTime';
 dayjs.extend(relativeTime);
 
-import ReactDOM from 'react-dom';
+import { createRoot } from 'react-dom/client';
 
 import { Provider } from 'react-redux';
 
@@ -68,22 +68,22 @@ const rootElement = document.getElementById('root');
 
 ReactModal.setAppElement(rootElement);
 
-ReactDOM.render(
+const root = createRoot(rootElement);
+root.render(
   <Provider store={store}>
     <ErrorBoundary>
       {router}
     </ErrorBoundary>
-  </Provider>,
-  rootElement
+  </Provider>
 );
 
 if (process.env.NODE_ENV === 'production') {
   document.addEventListener('DOMContentLoaded', () => {
     if ('serviceWorker' in navigator) {
       window.addEventListener('load', () => {
-        navigator.serviceWorker.register('/webpacked-service-worker.js').then(registration => {
+        navigator.serviceWorker.register('/webpacked-service-worker.js').then((registration) => {
           console.log('SW registered: ', registration);
-        }).catch(registrationError => {
+        }).catch((registrationError) => {
           console.log('SW registration failed: ', registrationError);
         });
       });
