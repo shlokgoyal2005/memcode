@@ -1,5 +1,5 @@
 import { createStore, applyMiddleware, compose } from 'redux';
-import thunk from 'redux-thunk';
+import { thunk } from 'redux-thunk';
 import reducers from './reducers';
 // import { offline } from '@redux-offline/redux-offline';
 // import config from '@redux-offline/redux-offline/lib/config';
