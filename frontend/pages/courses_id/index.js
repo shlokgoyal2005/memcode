@@ -15,14 +15,16 @@ import OldProblem from './components/OldProblem';
 import NewProblem from './components/NewProblem';
 // import { Cheatsheet } from './components/Cheatsheet';
 // import { Instructions } from './components/Instructions';
+import withParams from '~/components/withParams';
 
 import css from './index.css';
 
 import MyDuck from '~/ducks/MyDuck';
 
+@withParams
 @connect(
   (state, ownProps) => ({
-    courseId: Number.parseInt(ownProps.match.params.id),
+    courseId: Number.parseInt(ownProps.params.id),
     currentUser: state.global.Authentication.currentUser || false,
     My: state.global.My
   }),

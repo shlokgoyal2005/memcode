@@ -12,6 +12,9 @@ import Courses from './components/Courses';
 
 import css from './index.css';
 
+import withParams from '~/components/withParams';
+
+@withParams
 @withRouter
 @connect(
   (state) => ({
@@ -20,7 +23,7 @@ import css from './index.css';
 )
 class Page_users_id extends React.Component {
   static propTypes = {
-    match: PropTypes.object.isRequired,
+    params: PropTypes.object.isRequired,
     location: PropTypes.object.isRequired,
     currentUser: orFalse(PropTypes.object).isRequired,
   }
@@ -34,7 +37,7 @@ class Page_users_id extends React.Component {
   }
 
   componentDidUpdate = (prevProps) => {
-    if (prevProps.match.params.id !== this.props.match.params.id) {
+    if (prevProps.params.id !== this.props.params.id) {
       this.apiGetPage();
     }
   }
@@ -42,7 +45,7 @@ class Page_users_id extends React.Component {
   apiGetPage = () => {
     api.get.PageApi.getUserPage(
       (spe) => this.setState({ speGetPage: spe }),
-      { userId: this.props.match.params.id }
+      { userId: this.props.params.id }
     );
   }
 
@@ -58,7 +61,7 @@ class Page_users_id extends React.Component {
             <h1 style={{ paddingLeft: 15 }}>Courses</h1>
             <Courses
               location={this.props.location}
-              isCurrentUser={this.props.currentUser && this.props.currentUser.id.toString() === this.props.match.params.id}
+              isCurrentUser={this.props.currentUser && this.props.currentUser.id.toString() === this.props.params.id}
               createdCourses={createdCourses}
             />
           </section>

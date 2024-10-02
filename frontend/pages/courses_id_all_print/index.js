@@ -9,12 +9,13 @@ import css from './index.css';
 import MyDuck from '~/ducks/MyDuck';
 
 import api from '~/api';
-
+import withParams from '~/components/withParams';
+@withParams
 @connect(
   (state, ownProps) => {
     const pageState = state.pages.Page_courses_id_review;
     return {
-      courseId: Number.parseInt(ownProps.match.params.id),
+      courseId: Number.parseInt(ownProps.params.id),
       currentUser: state.global.Authentication.currentUser || false,
       ...pageState.speGetPage.status === 'success' &&
         {

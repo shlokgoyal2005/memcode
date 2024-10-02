@@ -6,10 +6,12 @@ import CourseActions from '~/components/CourseActions';
 // import css from './index.css';
 import MyDuck from '~/ducks/MyDuck';
 
+import withParams from '~/components/withParams';
+@withParams
 @connect(
   (state, ownProps) => {
     return {
-      courseId: Number.parseInt(ownProps.match.params.id),
+      courseId: Number.parseInt(ownProps.params.id),
       My: state.global.My,
       currentUser: state.global.Authentication.currentUser || false,
     };
