@@ -40,8 +40,8 @@ const router =
       <Route exact path="/courses/:id/review" element={auth(Page_courses_id_review)} simulated={false} persistent={false}/>
       <Route exact path="/courses/:id/review/print" element={auth(Page_courses_id_review_print)}/>
       <Route exact path="/courses/:id/all/print" element={auth(Page_courses_id_all_print)}/>
-      <Route exact path="/courses/:id/review/simulated" element={(props) => <Page_courses_id_review {...props} simulated/>}/>
-      <Route exact path="/courses/:id/review/persistent" element={(props) => <Page_courses_id_review {...props} persistent/>}/>
+      <Route exact path="/courses/:id/review/simulated" element={<Page_courses_id_review  simulated/>}/>
+      <Route exact path="/courses/:id/review/persistent" element={<Page_courses_id_review  persistent/>}/>
 
       {/* <Route exact path="/profile" element={<Page_profile/>}/> */}
       <Route exact path="/users/:id" element={onEnters.signIn(Page_users_id)}/>
