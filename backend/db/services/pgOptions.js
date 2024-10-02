@@ -20,8 +20,8 @@ const pgOptions = {
     console.log(cyan, e.query); // log the query being executed
   },
   // https://coderwall.com/p/irklcq
-  receive: (data) => {
-    _camelizeColumns(data);
+  receive: (event) => {
+    _camelizeColumns(event.data);
   },
   // disable warnings for tests,
   // because it was complaining a lot about duplicated connection
