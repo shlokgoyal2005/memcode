@@ -7,10 +7,13 @@
     "terminal.integrated.shell.linux": "/bin/bash"
   },
   "extensions": [
-    "dbaeumer.vscode-eslint",
+    "dbaeumer.vscode-eslint"
   ],
   "features": {
-    "postgres": "latest"
+    "ghcr.io/devcontainers/features/postgres": {
+      "version": "latest",
+      "installPostgres": true
+    }
   },
   "remoteUser": "vscode",
   "customizations": {
