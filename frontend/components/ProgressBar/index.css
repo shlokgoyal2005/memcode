@@ -1,6 +1,6 @@
 @import 'css/variables';
 
-:local(.ProgressBar){
+:local(.progressBar){
   padding: 1px;
   border-radius: 3px;
   background: rgba(255, 255, 255, 0.09) !important;

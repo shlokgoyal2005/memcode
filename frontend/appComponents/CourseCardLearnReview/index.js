@@ -59,7 +59,7 @@ class CourseCardLearnReview extends React.Component {
     </div>
 
   render = () => {
-    const className = "standard-course-card -learnReviewCourse " + css.CourseCardLearnReview;
+    const className = "standard-course-card -learnReviewCourse " + css.courseCardLearnReview;
     const courseDto = this.props.courseDto;
 
     if (courseDto.amountOfProblemsToReview === 0 && courseDto.amountOfProblemsToLearn === 0) {

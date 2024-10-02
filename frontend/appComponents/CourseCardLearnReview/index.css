@@ -1,6 +1,6 @@
 @import 'css/variables';
 
-:local(.CourseCardLearnReview){
+:local(.courseCardLearnReview){
   width: 199px;
   height: 213px;
   background: $color-main-3;

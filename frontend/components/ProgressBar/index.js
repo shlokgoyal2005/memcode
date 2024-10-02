@@ -17,7 +17,7 @@ class ProgressBar extends React.Component {
 
   render = () =>
     <section
-      className={`${this.props.className} ${css.ProgressBar}`}
+      className={`${this.props.className} ${css.progressBar}`}
       style={{ width: '100%' }}
     >
       <div className="inner" style={{ width: this.getCurrentWidth() }}/>
