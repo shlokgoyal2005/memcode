@@ -63,9 +63,8 @@ Before contributing, it's a good idea to create a related issue.
 2. Insert the necessary values - all those marked with "Required for local development"
 
 #### Install the needed libraries.
-1. Make sure you always use the correct node version, `8.4.0`. This can be done, e.g., by running `nvm use 8.4.0`.
-2. Install npm.
-3. Run `npm install`
+1. Install npm.
+2. Run `npm install`
 
 #### Set up the database.
 1. Create a new development database 'memcode': `make db-reset`.
