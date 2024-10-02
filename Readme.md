@@ -67,9 +67,8 @@ Before contributing, it's a good idea to create a related issue.
 2. Run `npm install`
 
 #### Set up the database.
-1. Create a new development database 'memcode': `make db-reset`.
-This will create the raw database for you - schema, a few necessary database rows, and nothing else.
-If you would like a bigger database to have something to work with, please write to contact@memcode.com, and I will create a development dump for you.
+1. Create a new development database 'memcode': `make db-reset`.  
+This will create the raw database for you - schema and a few necessary database rows.  
 
 #### Start code compilers and server.
 1. Run `make all` in your terminal.
