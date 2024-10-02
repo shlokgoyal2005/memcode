@@ -20,7 +20,7 @@ RUN npm install
 COPY . .
 
 # Copy environment variables
-COPY .env.example .env
+COPY .env.example.js .env.js
 
 # Expose the port the app runs on
 EXPOSE 3000
