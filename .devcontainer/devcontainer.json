@@ -9,12 +9,6 @@
   "extensions": [
     "dbaeumer.vscode-eslint"
   ],
-  "features": {
-    "ghcr.io/devcontainers/features/postgres": {
-      "version": "latest",
-      "installPostgres": true
-    }
-  },
   "remoteUser": "vscode",
   "customizations": {
     "vscode": {

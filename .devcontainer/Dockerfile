@@ -4,8 +4,11 @@ FROM node:20
 # Set the working directory inside the container
 WORKDIR /usr/src/app
 
-# Install PostgreSQL client
-RUN apt-get update && apt-get install -y postgresql-client
+# Install PostgreSQL and the PostgreSQL client
+RUN apt-get update && apt-get install -y \
+    postgresql \
+    postgresql-client \
+    && rm -rf /var/lib/apt/lists/*
 
 # Copy package.json and package-lock.json
 COPY package*.json ./
@@ -26,5 +29,11 @@ EXPOSE 3000
 ENV NODE_ENV=development
 ENV PGPASSWORD=postgres
 
+# Initialize PostgreSQL database and user
+RUN service postgresql start && \
+    su - postgres -c "psql -c \"CREATE ROLE postgres WITH LOGIN PASSWORD 'postgres';\"" && \
+    su - postgres -c "psql -c \"ALTER ROLE postgres WITH SUPERUSER;\"" && \
+    su - postgres -c "createdb memcode"
+
 # Start the app
-CMD ["bash", "-c", "make db-reset && make all"]
+CMD ["bash", "-c", "service postgresql start && make db-reset && make all"]
