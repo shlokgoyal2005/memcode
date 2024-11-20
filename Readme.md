@@ -1,27 +1,17 @@
 <div align="center">
-  <a href="http://memcode.com" title="Website memcode.com">
-    <img src="https://img.shields.io/website-up-down-green-red/http/shields.io.svg"/>
-  </a>
+  <a href="http://memcode.com" title="Website memcode.com"><img src="https://img.shields.io/website-up-down-green-red/http/shields.io.svg"/></a>
   
-  <a href="https://GitHub.com/Naereen/lakesare/memcode/contributors/" title="GitHub contributors">
-    <img src="https://img.shields.io/github/contributors/lakesare/memcode"/>
-  </a>
+  <a href="https://GitHub.com/Naereen/lakesare/memcode/contributors/" title="GitHub contributors"><img src="https://img.shields.io/github/contributors/lakesare/memcode"/></a>
   
-  <a href="https://github.com/lakesare/memcode/blob/master/LICENSE" title="GitHub license">
-    <img src="https://img.shields.io/github/license/Naereen/StrapDown.js.svg"/>
-  </a>
+  <a href="https://github.com/lakesare/memcode/blob/master/LICENSE" title="GitHub license"><img src="https://img.shields.io/github/license/Naereen/StrapDown.js.svg"/></a>
   
-  <a href="https://reactjs.org/docs/how-to-contribute.html#your-first-pull-request" title="PRs welcome">
-    <img src="https://img.shields.io/badge/PRs-welcome-brightgreen.svg"/>
-  </a>
+  <a href="https://reactjs.org/docs/how-to-contribute.html#your-first-pull-request" title="PRs welcome"><img src="https://img.shields.io/badge/PRs-welcome-brightgreen.svg"/></a>
 
 <!--   <a href="https://gitpod.io/#https://github.com/lakesare/memcode" title="Gitpod Ready-to-Code">
     <img src="https://img.shields.io/badge/Gitpod-Ready--to--Code-blue?logo=gitpod"/>
   </a> -->
 
-  <a href="https://patreon.com/memcode" title="Donate to Memcode project using Patreon">
-    <img src="https://img.shields.io/badge/patreon-donate-yellow.svg"/>
-  </a>
+  <a href="https://patreon.com/memcode" title="Donate to Memcode project using Patreon"><img src="https://img.shields.io/badge/patreon-donate-yellow.svg"/></a>
 </div>
 
 <h1 align="center">
