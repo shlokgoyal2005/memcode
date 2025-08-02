@@ -11,7 +11,7 @@
 </h1>
 
 <h2 align="center">
-  Flashcards for coders and scientists. Open-source, free for all.
+  Flashcards. Pretty. Open-source, free for all.
 </h2>
 
 <div align="center">
