@@ -1,7 +1,8 @@
 // ___why not use original method?
 // (http://www.blueraja.com/blog/477/a-better-spaced-repetition-learning-algorithm-sm2)
 // original method resolves into intervals too harsh:
-//
+//  
+
 // { days: 6 },
 // { days: 10 },
 // { days: 30 },
